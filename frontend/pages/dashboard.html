@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - FitMax Academy</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="brand">
+            🏋️ FITMAX
+        </div>
+
+        <div class="user-area">
+
+            <span id="usuarioNome">
+                Usuário
+            </span>
+
+            <button
+                class="logout"
+                onclick="sair()"
+            >
+                Sair
+            </button>
+
+        </div>
+
+    </header>
+
+    <main class="dashboard">
+
+        <section class="welcome">
+
+            <div>
+
+                <p class="small-title">
+                    BEM-VINDO AO SEU PAINEL
+                </p>
+
+                <h1>
+                    Olá, <span id="nomeUsuario"></span>!
+                </h1>
+
+                <p>
+                    Organize seus treinos e sua rotina.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="cards">
+
+            <!-- TREINOS -->
+
+            <div class="box">
+
+                <div class="box-title">
+                    <span>💪</span>
+
+                    <h2>
+                        Treinos
+                    </h2>
+                </div>
+
+                <select id="diaTreino">
+
+                    <option>
+                        Segunda-feira
+                    </option>
+
+                    <option>
+                        Terça-feira
+                    </option>
+
+                    <option>
+                        Quarta-feira
+                    </option>
+
+                    <option>
+                        Quinta-feira
+                    </option>
+
+                    <option>
+                        Sexta-feira
+                    </option>
+
+                    <option>
+                        Sábado
+                    </option>
+
+                    <option>
+                        Domingo
+                    </option>
+
+                </select>
+
+                <input
+                    id="treino"
+                    placeholder="Ex: Peito e Tríceps"
+                >
+
+                <button onclick="adicionarTreino()">
+                    + Adicionar treino
+                </button>
+
+                <div
+                    id="listaTreino"
+                    class="lista"
+                ></div>
+
+            </div>
+
+
+            <!-- REFEIÇÕES -->
+
+            <div class="box">
+
+                <div class="box-title">
+
+                    <span>🥗</span>
+
+                    <h2>
+                        Refeições
+                    </h2>
+
+                </div>
+
+                <input
+                    type="time"
+                    id="horaRefeicao"
+                >
+
+                <input
+                    id="refeicao"
+                    placeholder="Descrição da refeição"
+                >
+
+                <button onclick="adicionarRefeicao()">
+                    + Adicionar refeição
+                </button>
+
+                <div
+                    id="listaRefeicao"
+                    class="lista"
+                ></div>
+
+            </div>
+
+
+            <!-- PESO -->
+
+            <div class="box">
+
+                <div class="box-title">
+
+                    <span>📊</span>
+
+                    <h2>
+                        Acompanhamento
+                    </h2>
+
+                </div>
+
+                <input
+                    type="number"
+                    id="peso"
+                    step="0.1"
+                    placeholder="Registro de peso"
+                >
+
+                <button onclick="adicionarPeso()">
+                    Registrar
+                </button>
+
+                <div
+                    id="pesoAtual"
+                    class="info"
+                ></div>
+
+                <div
+                    id="historicoPeso"
+                    class="lista"
+                ></div>
+
+            </div>
+
+
+            <!-- IMC -->
+
+            <div class="box">
+
+                <div class="box-title">
+
+                    <span>🧮</span>
+
+                    <h2>
+                        Calculadora
+                    </h2>
+
+                </div>
+
+                <input
+                    type="number"
+                    id="pesoImc"
+                    step="0.1"
+                    placeholder="Peso em kg"
+                >
+
+                <input
+                    type="number"
+                    id="alturaImc"
+                    step="0.01"
+                    placeholder="Altura (ex: 1.70)"
+                >
+
+                <button onclick="calcularIMC()">
+                    Calcular IMC
+                </button>
+
+                <div
+                    id="resultadoImc"
+                    class="info"
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        FITMAX ACADEMY © 2026
+
+    </footer>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "fitmax-academy",
+  "version": "1.0.0",
+  "description": "Sistema de gerenciamento da FitMax Academy",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  }
+}
