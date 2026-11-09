@@ -31,3 +31,11 @@ CREATE TABLE IF NOT EXISTS pesos (
     registrado_em DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
+CREATE TABLE IF NOT EXISTS recuperacao_senha (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    usuario_id INTEGER NOT NULL UNIQUE,
+    codigo_hash TEXT NOT NULL,
+    expira_em INTEGER NOT NULL,
+    tentativas INTEGER DEFAULT 0,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);

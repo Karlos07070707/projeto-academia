@@ -57,6 +57,14 @@
                     id="senha"
                     placeholder="Digite sua senha"
                     required
+                    <a href="javascript:void(0)"
+   id="esqueciSenhaLink"
+   class="link-recuperar">
+    Esqueci minha senha &gt;
+</a>
+                    <a href="#" id="esqueciSenhaLink">
+    Esqueci minha senha
+</a>
                 >
 
                 <button type="submit">
@@ -64,6 +72,68 @@
                 </button>
 
             </form>
+            <div id="recuperacaoBox" hidden>
+
+    <h2>Recuperar senha</h2>
+
+    <p>Informe seu e-mail para receber o código.</p>
+
+    <form id="recuperacaoForm">
+
+        <label>E-mail</label>
+
+        <input
+            type="email"
+            id="emailRecuperacao"
+            placeholder="Seu e-mail cadastrado"
+            required
+        >
+
+        <button type="submit">
+            ENVIAR CÓDIGO
+        </button>
+
+    </form>
+
+    <form id="novaSenhaForm" hidden>
+
+        <label>Código recebido</label>
+
+        <input
+            type="text"
+            id="codigoRecuperacao"
+            placeholder="Digite os 6 dígitos"
+            maxlength="6"
+            inputmode="numeric"
+            required
+        >
+
+        <label>Nova senha</label>
+
+        <input
+            type="password"
+            id="novaSenha"
+            placeholder="Digite sua nova senha"
+            minlength="8"
+            required
+            <a href="#" id="esqueciSenhaLink" class="link-recuperar">
+    Esqueci minha senha?
+</a>
+        >
+
+        <button type="submit">
+            ALTERAR SENHA
+        </button>
+
+    </form>
+
+    <p id="mensagemRecuperacao"></p>
+
+    <a href="#" id="voltarLogin">
+        Voltar para o login
+    </a>
+
+</div>
 
             <p id="mensagem"></p>
 

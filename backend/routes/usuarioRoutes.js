@@ -17,5 +17,13 @@ router.post(
     usuarioController.login
 );
 
+router.post(
+    "/recuperar-senha",
+    usuarioController.solicitarRecuperacao
+);
 
+router.post(
+    "/redefinir-senha",
+    usuarioController.redefinirSenha
+);
 module.exports = router;

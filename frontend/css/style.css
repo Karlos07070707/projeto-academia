@@ -514,3 +514,72 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* RECUPERAÇÃO DE SENHA */
+
+#esqueciSenhaLink {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: var(--amarelo);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+#recuperacaoBox {
+    margin-top: 20px;
+}
+
+#recuperacaoBox h2 {
+    color: var(--amarelo);
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#recuperacaoBox > p {
+    color: var(--cinza);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#voltarLogin {
+    display: block;
+    text-align: center;
+    color: var(--amarelo);
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.link-recuperar {
+    display: block;
+    width: fit-content;
+    margin-top: 12px;
+    margin-left: auto;
+    color: #ffd700;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.link-recuperar:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+.link-recuperar {
+    display: block;
+    width: fit-content;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    color: #ffd700 !important;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+}
+
+.link-recuperar:hover {
+    color: white !important;
+    text-decoration: underline;
+}
